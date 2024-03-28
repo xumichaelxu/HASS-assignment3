@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superimposed Graphs</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Commodity or Place of Living?</h1>
+    <h2 class="name">by: Michael S. Susanto</h2>
+    <h2 class="source" id="sourceLink">source</h2>
+    <div id="chart"></div>
+    <div id="tableauViz" class="tableauVizContainer">
+      <!-- Tableau visualizations will be inserted here -->
+    </div>
+    <div
+      class="header-tab"
+      onmouseover="lightUpButton()"
+      onmouseout="turnOffButton()"
+      onclick="openNewPage()"
+    >
+      blow up graphic
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js" defer></script>
+    <script>
+      function lightUpButton() {
+        var button = document.querySelector(".header-tab");
+        button.style.backgroundColor = "#ffff66"; // Change to your desired color
+      }
+
+      function turnOffButton() {
+        var button = document.querySelector(".header-tab");
+        button.style.backgroundColor = ""; // Reset to default color
+      }
+
+      function openNewPage() {
+        var embedLink =
+          "https://public.tableau.com/views/HASSAssignment3/PriceChangeYearly?:showVizHome=no&:embed=true";
+        var newWindow = window.open("", "_blank");
+        var htmlContent = `
+                <iframe src="${embedLink}" frameborder="0" style="width: 100%; height: 100vh;"></iframe>
+            `;
+        newWindow.document.write(htmlContent);
+      }
+    </script>
+  </body>
+</html>
