@@ -47,7 +47,7 @@ window.addEventListener('resize', adjustIframeDimensions);
 
 function lightUpButton() {
   var button = document.querySelector(".header-tab");
-  button.style.backgroundColor = "#ffff66"; // Change to your desired color
+  button.style.backgroundColor = "grey"; // Change to your desired color
 }
 
 function turnOffButton() {
