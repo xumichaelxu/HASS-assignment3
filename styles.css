@@ -33,7 +33,8 @@ body, html {
 /* Additional styles can be added here if needed */
 .header-tab {
   padding: 10px;
-  background-color: #ffffff00;
+  background-color: black;
+  font-style: bold;
   cursor: pointer;
 }
 
